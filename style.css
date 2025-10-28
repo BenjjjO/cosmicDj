@@ -1,3 +1,81 @@
+/* Booking/contact form styles */
+.booking__container {
+  background: var(--extra-light);
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 2px 32px 0 rgba(255,0,119,0.08);
+}
+.booking__form {
+  max-width: 500px;
+  margin: 2rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.form__group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.form__group input,
+.form__group textarea {
+  width: 100%;
+  padding: 1rem 1rem 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--white);
+  color: var(--primary-color);
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 1px 8px 0 rgba(0,0,0,0.08);
+  transition: box-shadow 0.2s;
+}
+.form__group input:focus,
+.form__group textarea:focus {
+  box-shadow: 0 2px 16px 0 rgba(255,0,119,0.18);
+}
+.form__group label {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  color: var(--accent-color);
+  font-size: 1rem;
+  pointer-events: none;
+  background: transparent;
+  transition: 0.2s;
+}
+.form__group input:focus + label,
+.form__group input:not(:placeholder-shown) + label,
+.form__group textarea:focus + label,
+.form__group textarea:not(:placeholder-shown) + label {
+  top: -0.7rem;
+  left: 0.7rem;
+  font-size: 0.85rem;
+  color: var(--primary-color);
+  background: var(--extra-light);
+  padding: 0 0.3rem;
+}
+.booking__btn {
+  background: var(--accent-color);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 16px 0 rgba(255,0,119,0.12);
+  transition: background 0.2s;
+}
+.booking__btn:hover {
+  background: #ffd1e6;
+  color: var(--accent-color);
+}
+.form__msg {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--accent-color);
+  text-align: center;
+}
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 
@@ -11,6 +89,15 @@
   --white: #ffffff;
   --max-width: 1200px;
   --header-font: "Merriweather", serif;
+}
+
+:root[data-theme="light"] {
+  --primary-color: #fff8fa;
+  --accent-color: #ff0077;
+  --text-dark: #222;
+  --text-light: #555;
+  --extra-light: #f4f6f5;
+  --white: #0b0b0f;
 }
 
 * {
@@ -31,6 +118,16 @@
   font-weight: 600;
   font-family: var(--header-font);
   color: var(--accent-color);
+  animation: neonGlow 2.5s infinite alternate;
+}
+
+@keyframes neonGlow {
+  0% {
+    text-shadow: 0 0 8px #ccff00, 0 0 16px #004cff, 0 0 32px #ffd1e6;
+  }
+  100% {
+    text-shadow: 0 0 24px #ffdd00, 0 0 48px #d1e3ff, 0 0 64px #ff0077;
+  }
 }
 
 .section__description {
@@ -84,6 +181,19 @@ nav {
   align-items: center;
   justify-content: space-between;
   background-color: var(--primary-color);
+}
+
+.dark-toggle {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-size: 1.7rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: color 0.2s;
+}
+.dark-toggle:active {
+  color: #ffd1e6;
 }
 
 .nav__logo .logo {
@@ -256,6 +366,8 @@ nav {
   position: relative;
   isolation: isolate;
   padding: 2rem;
+  transition: transform 0.25s cubic-bezier(.2,.9,.3,1), box-shadow 0.25s cubic-bezier(.2,.9,.3,1);
+  box-shadow: 0 2px 16px 0 rgba(255,0,119,0.08);
 }
 
 .product__card::before {
@@ -272,6 +384,12 @@ nav {
 
 .product__card:hover::before {
   height: 100%;
+}
+
+.product__card:hover {
+  transform: scale(1.04) rotate(-1deg);
+  box-shadow: 0 4px 32px 0 rgba(255,0,119,0.18), 0 0 24px #ff0077;
+  z-index: 2;
 }
 
 .product__card h4 {

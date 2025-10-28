@@ -23,6 +23,9 @@
         <div class="nav__menu__btn" id="menu-btn">
           <i class="ri-menu-line"></i>
         </div>
+          <button id="dark-toggle" class="dark-toggle" aria-label="Toggle dark mode">
+            <i class="ri-moon-line"></i>
+          </button>
       </div>
       <ul class="nav__links" id="nav-links">
         <li><a href="#home">Home</a></li>
@@ -39,7 +42,7 @@
 
     <header class="section__container header__container" id="home">
       <div class="header__image">
-        <img src="header.jpg" alt="cosmic dj header" data-parallax="0.25" />
+        <img src="dj-booking.jpg" alt="DJ mixing at event" data-parallax="0.25" />
       </div>
       <div class="header__content">
         <div>
@@ -206,7 +209,33 @@
       </div>
     </section>
 
-    <footer class="footer" id="contact">
+    <section class="section__container booking__container" id="contact">
+      <h2 class="section__header">Book Cosmic DJ</h2>
+      <div class="booking__image">
+        <img src="dj-header.jpg" alt="DJ performing live" style="max-width:320px; border-radius:1rem; margin:0 auto 2rem auto; display:block;" />
+      </div>
+      <form class="booking__form" autocomplete="off">
+        <div class="form__group">
+          <input type="text" id="name" name="name" required placeholder="" />
+          <label for="name">Your Name</label>
+        </div>
+        <div class="form__group">
+          <input type="email" id="email" name="email" required placeholder="" />
+          <label for="email">Email</label>
+        </div>
+        <div class="form__group">
+          <input type="text" id="event" name="event" required placeholder="" />
+          <label for="event">Event Type</label>
+        </div>
+        <div class="form__group">
+          <textarea id="details" name="details" rows="3" required placeholder=""></textarea>
+          <label for="details">Details</label>
+        </div>
+        <button type="submit" class="booking__btn">Send Booking Request</button>
+        <div class="form__msg" id="form-msg"></div>
+      </form>
+    </section>
+    <footer class="footer">
       <div class="section__container footer__container">
         <div class="footer__col">
           <div class="footer__logo">

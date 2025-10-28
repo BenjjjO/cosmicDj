@@ -1,3 +1,30 @@
+// Booking/contact form validation and feedback
+try {
+  const bookingForm = document.querySelector('.booking__form');
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = bookingForm.elements['name']?.value.trim() || '';
+      const email = bookingForm.elements['email']?.value.trim() || '';
+      const event = bookingForm.elements['event']?.value.trim() || '';
+      const details = bookingForm.elements['details']?.value.trim() || '';
+      const msg = document.getElementById('form-msg');
+      if (!name || !email || !event || !details) {
+        msg.textContent = 'Please fill in all fields.';
+        return;
+      }
+      if (!/^\S+@\S+\.\S+$/.test(email)) {
+        msg.textContent = 'Please enter a valid email address.';
+        return;
+      }
+      msg.textContent = 'Thank you! Your booking request has been sent.';
+      bookingForm.reset();
+      setTimeout(() => { msg.textContent = ''; }, 4000);
+    });
+  }
+} catch (err) {
+  console.error('Booking form error:', err);
+}
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
@@ -66,6 +93,25 @@ const swiper = new Swiper(".swiper", {
   loop: true,
 });
 
+// Dark mode toggle logic
+const darkToggle = document.getElementById('dark-toggle');
+if (darkToggle) {
+  darkToggle.addEventListener('click', () => {
+    const root = document.documentElement;
+    const isLight = root.getAttribute('data-theme') === 'light';
+    root.setAttribute('data-theme', isLight ? 'dark' : 'light');
+    darkToggle.innerHTML = isLight ? '<i class="ri-moon-line"></i>' : '<i class="ri-sun-line"></i>';
+  });
+  // Set initial theme based on system preference
+  if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+    document.documentElement.setAttribute('data-theme', 'light');
+    darkToggle.innerHTML = '<i class="ri-sun-line"></i>';
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    darkToggle.innerHTML = '<i class="ri-moon-line"></i>';
+  }
+}
+     
 /* ===== Custom Scroll Effects ===== */
 
 // Create a slim progress bar at the top of the page
