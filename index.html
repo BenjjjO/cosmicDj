@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cosmic DJ — Professional DJ & Event Services</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#" class="logo">Cosmic DJ</a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav__search" id="nav-search">
+        <input type="text" placeholder="Search" />
+        <span><i class="ri-search-2-line"></i></span>
+      </div>
+    </nav>
+
+    <header class="section__container header__container" id="home">
+      <div class="header__image">
+        <img src="header.jpg" alt="cosmic dj header" data-parallax="0.25" />
+      </div>
+      <div class="header__content">
+        <div>
+          <h1>Make Your Event Legendary</h1>
+          <p>
+            High-energy DJ performances, custom playlists, and full event
+            production to keep the dancefloor packed all night.
+          </p>
+          <p style="margin-top:1rem; font-weight:600;">Book now — packages starting at $299</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="section__container deals__container">
+      <div class="deals__card">
+        <h2 class="section__header">Packages & Deals</h2>
+        <p>Hand-picked DJ packages for weddings, clubs, corporate events, and private parties.</p>
+      </div>
+      <div class="deals__card">
+        <span><i class="ri-music-2-line"></i></span>
+        <h4>Starter Mix</h4>
+        <p>Perfect for small parties — 3 hours of DJing + basic lights.</p>
+      </div>
+      <div class="deals__card">
+        <span><i class="ri-calendar-schedule-line"></i></span>
+        <h4>Event Pro</h4>
+        <p>Full service DJing up to 6 hours, MC, and advanced lighting.</p>
+      </div>
+      <div class="deals__card">
+        <span><i class="ri-star-line"></i></span>
+        <h4>VIP Experience</h4>
+        <p>Custom production, visuals, and playlist curation for premium events.</p>
+      </div>
+    </section>
+
+    <section class="section__container about__container" id="about">
+      <div class="about__header">
+        <div>
+          <h2 class="section__header">About Cosmic DJ</h2>
+          <p class="section__description">
+            For over a decade, Cosmic DJ has brought unforgettable nights to
+            clubs, weddings, and corporate events — blending expert mixing with
+            crowd-reading and premium production.
+          </p>
+        </div>
+        <button class="about__btn">Book a Consultation</button>
+      </div>
+      <div class="about__content">
+        <div class="about__image">
+          <img src="about.png" alt="cosmic dj" />
+        </div>
+        <div class="about__grid">
+          <div class="about__card">
+            <h3>1.</h3>
+            <h4>Professional DJs</h4>
+            <p>Experienced DJs who read the room and craft perfect sets every time.</p>
+          </div>
+          <div class="about__card">
+            <h3>2.</h3>
+            <h4>Custom Playlists</h4>
+            <p>We build playlists tailored to your event, guests, and vibes.</p>
+          </div>
+          <div class="about__card">
+            <h3>3.</h3>
+            <h4>Production</h4>
+            <p>Lighting, visuals, and stage setup to elevate your experience.</p>
+          </div>
+          <div class="about__card">
+            <h3>4.</h3>
+            <h4>Reliable Service</h4>
+            <p>Timely setup, clear communication, and professional conduct.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container product__container" id="services">
+      <h2 class="section__header">Services</h2>
+      <div class="product__grid">
+        <div class="product__card">
+          <h4>Starter Mix — 3 hrs</h4>
+          <p>$299</p>
+          <img src="product-1.png" alt="starter mix" />
+        </div>
+        <div class="product__card">
+          <h4>Club Night — 6 hrs</h4>
+          <p>$699</p>
+          <img src="product-2.png" alt="club night" />
+        </div>
+        <div class="product__card">
+          <h4>Wedding Special</h4>
+          <p>$999</p>
+          <img src="product-3.png" alt="wedding dj" />
+        </div>
+        <div class="product__card">
+          <h4>Corporate Package</h4>
+          <p>Custom pricing</p>
+          <img src="product-4.png" alt="corporate event" />
+        </div>
+        <div class="product__card">
+          <h4>Custom Playlist</h4>
+          <p>$79</p>
+          <img src="product-5.png" alt="custom playlist" />
+        </div>
+        <div class="product__card">
+          <h4>Visuals & Lighting</h4>
+          <p>From $199</p>
+          <img src="product-6.png" alt="lighting" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container client__container" id="events">
+      <div class="client__content">
+        <h2 class="section__header">Events & Testimonials</h2>
+        <p class="section__description">
+          Words from clients who've danced the night away with Cosmic DJ.
+        </p>
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="client__card">
+                <img src="camela.jpeg" alt="client" />
+                <div>
+                  <p>
+                    "Cosmic DJ made our wedding reception unforgettable. The
+                    setlist was perfect and the energy was non-stop."
+                  </p>
+                  <h4>Camela R.</h4>
+                  <h5>Wedding Bride</h5>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="client__card">
+                <img src="Meadow .jpeg" alt="client" />
+                <div>
+                  <p>
+                    "Professional, punctual, and the crowd loved every track."
+                  </p>
+                  <h4>Meadow T.</h4>
+                  <h5>Event Planner</h5>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="client__card">
+                <img src="paulie1.jpeg" alt="client" />
+                <div>
+                  <p>
+                    "Top-tier production and an amazing DJ — highly recommended
+                    for corporate events." 
+                  </p>
+                  <h4>Paul S.</h4>
+                  <h5>Corporate Host</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="contact">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="footer__logo">
+            <a href="#" class="logo">Cosmic DJ</a>
+          </div>
+          <p>
+            Ready to elevate your next event? Contact Cosmic DJ for a custom
+            quote and let’s make your night unforgettable.
+          </p>
+          <ul class="footer__socials">
+            <li>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-linkedin-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-pinterest-fill"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul class="footer__links">
+            <li><a href="#services">DJ Packages</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Resources</h4>
+          <ul class="footer__links">
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Contact Support</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Support</h4>
+          <ul class="footer__links">
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Affiliates</a></li>
+            <li><a href="#">Sitemap</a></li>
+            <li><a href="#">Cancelation Policy</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bar">Copyright © 2025. All rights reserved.</div>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
