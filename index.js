@@ -52,41 +52,59 @@ navSearch.addEventListener("click", (e) => {
 });
 
 const scrollRevealOption = {
-  distance: "50px",
+  distance: "30px",
   origin: "bottom",
-  duration: 1000,
+  duration: 800,
+  easing: 'cubic-bezier(0.2, 0.9, 0.3, 1)',
+  opacity: 0,
+  cleanup: true
 };
 
+// Header section animations with Apple-like refinements
 ScrollReveal().reveal(".header__image img", {
   ...scrollRevealOption,
   origin: "right",
+  distance: "40px",
+  delay: 200
 });
 ScrollReveal().reveal(".header__content div", {
-  duration: 1000,
-  delay: 500,
+  ...scrollRevealOption,
+  distance: "15px",
+  delay: 300
 });
 ScrollReveal().reveal(".header__content h1", {
   ...scrollRevealOption,
-  delay: 1000,
+  distance: "25px",
+  delay: 400
 });
 ScrollReveal().reveal(".header__content p", {
   ...scrollRevealOption,
-  delay: 1500,
+  distance: "20px",
+  delay: 500
 });
 
+// Deals section with staggered reveals
 ScrollReveal().reveal(".deals__card", {
   ...scrollRevealOption,
-  interval: 500,
+  distance: "20px",
+  interval: 250,
+  viewFactor: 0.2
 });
 
+// About section with refined animations
 ScrollReveal().reveal(".about__image img", {
   ...scrollRevealOption,
   origin: "right",
+  distance: "40px",
+  delay: 200,
+  viewFactor: 0.3
 });
 ScrollReveal().reveal(".about__card", {
-  duration: 1000,
-  interval: 500,
-  delay: 500,
+  ...scrollRevealOption,
+  distance: "25px",
+  interval: 300,
+  delay: 300,
+  viewFactor: 0.2
 });
 
 const swiper = new Swiper(".swiper", {
